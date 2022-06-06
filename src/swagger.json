@@ -1,0 +1,190 @@
+{
+    "swagger": "2.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "ongo-project",
+        "description": "technical test",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:4000",
+    "basePath": "",
+    "tags": [{
+        "name": "products",
+        "description": "API for products managment system"
+    }],
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/products": {
+            "get": {
+                "tags": [
+                    "products"
+                ],
+                "summary": "Get all products in the system",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/product"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "products"
+                ],
+                "summary": "Create a new product in system",
+                "parameters": [{
+                    "in": "body",
+                    "name": "body",
+                    "description": "product we want to add",
+                    "schema": {
+                        "$ref": "#/definitions/product"
+                    }
+                }],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/id"
+                        }
+                    },
+                    "400": {
+                        "description": "Failed. Bad post data."
+                    }
+                }
+            }
+        },
+        "/products/{id}": {
+            "parameters": [{
+                "in": "path",
+                "name": "id",
+                "required": true,
+                "description": "Get a specific product by ID",
+                "type": "string"
+            }],
+            "get": {
+                "tags": [
+                    "products"
+                ],
+                "summary": "GET product with given ID",
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema" : {
+                            "$ref": "#/definitions/product"
+                        }
+                    },
+                    "400": {
+                        "description": "Failed. Product not found"
+                    }
+                }
+            },
+            "put": {
+                "summary": "update product with given ID",
+                "tags": [
+                    "products"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "description": "product with values and properties",
+                        "schema": {
+                            "$ref": "#/definitions/product"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/product"
+                        }
+                    },
+                    "400": {
+                        "description": "Failed. Bad post data"
+                    },
+                    "404": {
+                        "description": "Failed. Product not found"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a specific product by ID",
+                "tags": [
+                    "products"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "$ref": "#/definitions/id"
+                        }
+                    },
+                    "404": {
+                        "description": "Product not found"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "id": {
+            "properties": {
+                "uuid" : {
+                    "type": "string"
+                }
+            }
+        },
+        "product" : {
+            "type" : "object",
+            "properties": {
+                "product_name": {
+                    "type": "string"
+                },
+                "desc": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "number"
+                },
+                "product_type": {
+                    "type": "string"
+                },
+                "tags": [{
+                    "type": "string"
+                }]
+
+            }
+        },
+        "products": {
+            "type": "object",
+            "properties": {
+                "products": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "#/definitions/product"
+                    }
+    
+                }
+            }
+        }
+    }
+}
