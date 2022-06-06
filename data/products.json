@@ -1,0 +1,93 @@
+{ 
+    "_id" : ObjectId("629e21472866a1453bac7ba8"), 
+    "product_name" : "crispy", 
+    "desc" : "crunchy cripsy with sauces", 
+    "value" : 7.5, 
+    "product_type" : "food", 
+    "tags" : [
+        "chicken", 
+        "food"
+    ], 
+    "created_date" : ISODate("2022-06-06T15:46:15.962+0000"), 
+    "__v" : NumberInt(0)
+},
+{ 
+    "_id" : ObjectId("629e22792866a1453bac7baa"), 
+    "product_name" : "keyboard", 
+    "desc" : "black keyboard wired", 
+    "value" : NumberInt(20), 
+    "product_type" : "electronics", 
+    "tags" : [
+        "computer", 
+        "wired"
+    ], 
+    "created_date" : ISODate("2022-06-06T15:51:21.595+0000"), 
+    "__v" : NumberInt(0)
+},
+{ 
+    "_id" : ObjectId("629e24262866a1453bac7bac"), 
+    "product_name" : "The map of the world", 
+    "desc" : "wood art contains all the continents of the world", 
+    "value" : NumberInt(75), 
+    "product_type" : "wood art", 
+    "tags" : [
+        "art", 
+        "wood", 
+        "map"
+    ], 
+    "created_date" : ISODate("2022-06-06T15:58:30.644+0000"), 
+    "__v" : NumberInt(0)
+},
+{ 
+    "_id" : ObjectId("629e248f2866a1453bac7bae"), 
+    "product_name" : "Grass cutter", 
+    "desc" : "machine to make your garden wonderfull", 
+    "value" : NumberInt(30), 
+    "product_type" : "tools", 
+    "tags" : [
+        "machine", 
+        "cutter", 
+        "grass"
+    ], 
+    "created_date" : ISODate("2022-06-06T16:00:15.240+0000"), 
+    "__v" : NumberInt(0)
+},
+{ 
+    "_id" : ObjectId("629e24d52866a1453bac7bb0"), 
+    "product_name" : "T-shirt", 
+    "desc" : "yellow t-shirt medium size", 
+    "value" : NumberInt(30), 
+    "product_type" : "cloths", 
+    "tags" : [
+        "tshirt", 
+        "summer", 
+        "yellow"
+    ], 
+    "created_date" : ISODate("2022-06-06T16:01:25.062+0000"), 
+    "__v" : NumberInt(0)
+},
+{ 
+    "_id" : ObjectId("629e25022866a1453bac7bb2"), 
+    "product_name" : "Ball", 
+    "desc" : "small ball for children", 
+    "value" : NumberInt(5), 
+    "product_type" : "other", 
+    "tags" : [
+        "ball", 
+        "children"
+    ], 
+    "created_date" : ISODate("2022-06-06T16:02:10.162+0000"), 
+    "__v" : NumberInt(0)
+},
+{ 
+    "_id" : ObjectId("629e6e4bd67dddb46be54559"), 
+    "product_name" : "jeans", 
+    "desc" : "red jeans", 
+    "value" : NumberInt(45), 
+    "product_type" : "cloths", 
+    "tags" : [
+        "women cloths"
+    ], 
+    "created_date" : ISODate("2022-06-06T21:14:51.497+0000"), 
+    "__v" : NumberInt(0)
+}
